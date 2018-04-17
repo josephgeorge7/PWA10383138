@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Baby Cry</string>
+    <string name="action_settings">Settings</string>
+    <string name="BASE_URL">https://api.jcdecaux.com</string>
+    <string name="JCD_API_KEY">564f8fb1fbd7fe5ba326f144e61082ccdb3c131a</string>
+    <string name="contract_list">Contract List</string>
+    <string name="station_list">Station List</string>
+    <string name="title_activity_maps">Map</string>
+</resources>
