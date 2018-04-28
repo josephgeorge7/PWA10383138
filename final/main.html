@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+<style type="text/css">
+.main{
+	border-width:2px;
+	border-color:#CCC;
+	border-style:outset;
+	margin:100px;
+	float:left;
+	width:800px;
+	padding-bottom:20px;
+
+}
+.lr_c_tmt{
+	float:left;
+	margin-left:15px;
+	margin-top:10px;
+}
+.lr_c_fce{
+	float:left;
+	width:100px;
+	margin-left:15px;
+	margin-top:10px;
+
+
+}
+.time_slot{
+	float:left;
+	width:800px;
+	background-color:#EEEEEE;
+	padding-top:8px;
+}
+.dates{
+	width:100px;
+	margin-left:18px;
+	margin-bottom:10px;
+	float:left;
+	text-align:center;
+	cursor:pointer;
+	border-right:groove;
+	border-color:#FFFFFF;
+}
+.times{
+	width:auto;
+	margin-left:18px;
+	margin-bottom:10px;
+	float:left;
+	cursor:pointer;
+}
+</style>
+</head>
+<script src="js/jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	
+	$('a').css('color','black');
+	$('.current').next().hide();
+	$('a:first').css('color','red');
+	 $('a').click(function() {
+	 $('.lr_c_fce').show();
+	
+     var target = $(this).attr('rel');
+	  //alert(target);
+	  $('.current').hide();
+     //   $('.' + $(this).val()).show();  
+     $("#"+target).show();
+	 $('a').css('color','black');
+	 $(this).css('color','red');
+});
+	 $('.morng').click(function() {
+		 $('.lr_c_fce').hide();
+		 $('.morg').show();
+		if ($('.morg').text == "") {
+        // handle non visible state
+		alert();
+   		 } else {
+        // handle visible state
+    }
+		 
+	 });
+	 $('.aftrnun').click(function() {
+		 $('.lr_c_fce').hide();
+		 $('.aftr').show();
+		 
+	 });
+	 
+	 $('.eveng').click(function() {
+		 $('.lr_c_fce').hide();
+		 $('.evng').show();
+		 
+	 });
+	 
+	 $('.nyt').click(function() {
+		 $('.lr_c_fce').hide();
+		 $('.nite').show();
+		 
+	 });
+	 $('.all').click(function() {
+		 $('.lr_c_fce').show();
+		 
+	 });
+	 
+	 //add Next second day
+	 var m_names = new Array("January", "February", "March", 
+		"April", "May", "June", "July", "August", "September", 
+		"October", "November", "December");
+	var today = new Date();
+	var dd = today.getDate()+2;
+	var mm = today.getMonth(); //January is 0!
+
+	var yyyy = today.getFullYear();
+	if(dd<10){
+	dd='0'+dd;
+	} 
+	
+	var today = dd+' '+m_names[mm];
+	$('#netxSecondDay').text(today);
+	 //add Next second day end
+});
+</script>
+
+<body>
+<div class="main" >
+<div style="padding-left:10px; font-size:20px; "><h3>Showtimes </h3></div>
+<div  id="myselector" style="width:800px;margin-top:10px;">
+	<div class="dates"><a id="currentDay" rel="first">Today</a></div>
+	<div class="dates"><a id="nextDay" rel="second">Tomorrow</a></div>
+	<div class="dates"><a id="netxSecondDay" rel="third"></a></div>
+</div>
+
+<div class="current"  id="first">
+	<div class="lr_c_tmt" style="float:left; width:700px"><a class="vk_bk lr-s-din" href="">Rampage</a></div>
+
+	<div class="lr_c_fce morg" >
+	<div class="lr_c_stnl">8:00<span>am</span></div></div>
+	<div class="lr_c_fce aftr">
+	<div class="lr_c_stnl">1:00<span>pm</span></div></div>
+	<div class="lr_c_fce evng">
+	<div class="lr_c_stnl ">6:25<span>pm</span></div></div>
+	<div class="lr_c_fce nite">
+	<div class="lr_c_stnl">8:50<span>pm</span></div></div>
+	<div class="lr_c_tmt" style="float:left; width:700px"><a class="vk_bk lr-s-din" href="">A Quiet Place</a></div>
+
+	<div class="lr_c_fce morg" >
+	<div class="lr_c_stnl">9:30<span>am</span></div></div>
+	<div class="lr_c_fce aftr">
+	<div class="lr_c_stnl">1:30<span>pm</span></div></div>
+	<div class="lr_c_fce evng">
+	<div class="lr_c_stnl">6:25<span>pm</span></div></div>
+	<div class="lr_c_fce nite">
+	<div class="lr_c_stnl">8:50<span>pm</span></div></div>
+</div>
+
+
+<div class="current"  id="second">
+	<div class="lr_c_tmt" style="float:left; width:800px"><a class="vk_bk lr-s-din" href="">Rampage1</a></div>
+
+	<div class="lr_c_fce morg" >
+	<div class="lr_c_stnl">10:35<span>am</span></div></div>
+	<div class="lr_c_fce aftr">
+	<div class="lr_c_stnl">2:00<span>pm</span></div></div>
+	<div class="lr_c_fce evng">
+	<div class="lr_c_stnl">6:25<span>pm</span></div></div>
+	<div class="lr_c_fce nite">
+	<div class="lr_c_stnl">8:50<span>pm</span></div></div>
+	<div class="lr_c_tmt" style="float:left; width:800px"><a class="vk_bk lr-s-din" href="">A Quiet Place1</a></div>
+
+	<div class="lr_c_fce morg" >
+	<div class="lr_c_stnl">7:30<span>am</span></div></div>
+	<div class="lr_c_fce aftr">
+	<div class="lr_c_stnl">1:00<span>pm</span></div></div>
+	<div class="lr_c_fce evng">
+	<div class="lr_c_stnl">6:25<span>pm</span></div></div>
+	<div class="lr_c_fce nite">
+	<div class="lr_c_stnl">8:50<span>pm</span></div></div>
+</div>
+
+
+<div class="current"  id="third">
+	<div class="lr_c_tmt" style="float:left; width:800px"><a class="vk_bk lr-s-din" href="">Rampage2</a></div>
+
+	<div class="lr_c_fce morg" >
+	<div class="lr_c_stnl">8:35<span>am</span></div></div>
+	<div class="lr_c_fce aftr">
+	<div class="lr_c_stnl">1:00<span>pm</span></div></div>
+	<div class="lr_c_fce evng">
+	<div class="lr_c_stnl">6:25<span>pm</span></div></div>
+	<div class="lr_c_fce nite">
+	<div class="lr_c_stnl">8:50<span>pm</span></div></div>
+	<div class="lr_c_tmt" style="float:left; width:800px"><a class="vk_bk lr-s-din" href="">A Quiet Place2</a></div>
+
+	<div class="lr_c_fce morg" >
+	<div class="lr_c_stnl">9:00<span>am</span></div></div>
+	<div class="lr_c_fce aftr">
+	<div class="lr_c_stnl">2:00<span>pm</span></div></div>
+	<div class="lr_c_fce evng">
+	<div class="lr_c_stnl ">6:25<span>pm</span></div></div>
+	<div class="lr_c_fce nite">
+	<div class="lr_c_stnl ">8:50<span>pm</span></div></div>
+</div>
+
+</div>
+</div>
+</body>
+
+</html>

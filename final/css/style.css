@@ -1,0 +1,1368 @@
+/* @group General styles */
+
+/*
+Resets styles then adds basic typographical styling
+By Mark Wallis, markwallis.ie
+*/
+
+/* @group Reset */
+
+/* Based on http://meyerweb.com/eric/tools/css/reset/ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	text-decoration: none;
+}
+
+body {
+    margin: 0 auto;
+    position: relative;
+    background-color: #d2d2d2;
+	color: #333;
+	font-family: Arial, sans-serif;
+    font-size: 12px;
+    line-height: 1.5; /* Baseline grid of 18px */
+    text-align: center;
+}
+
+.linebottom {margin-left:238px; padding-top:8px; padding-bottom:8px; height:2px; background:url(/images/dline.png) left repeat-x;}
+
+ul {
+	list-style: none;
+}
+.bullets{
+	list-style-type:circle;
+	margin-top: 0;
+    border-top-width: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    border-bottom-width: 0;
+    padding-bottom: 0;
+}
+.bullets-li{
+	margin-top: 0;
+    border-top-width: 0;
+    padding-top: 0;
+    margin-bottom: 0;
+    border-bottom-width: 0;
+    padding-bottom: 0;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+:focus {
+	outline: 0;
+}
+
+/* tables may still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* @end Reset */
+
+/* @group Font sizes */
+
+/* basic font sizes */
+p, ul, ol, dl, table, address, blockquote, fieldset, pre, form div {
+	font-size: 1em;  /* 12px */
+}
+
+/* deal with likely (but certainly not all) inherited shrinkage */
+ul p, ol p, table p, dl p, ul ul, ol ol, ul ol, ol ul, address p, blockquote p, form div div, form div p, fieldset div, table form div {
+	font-size: 1em;
+}
+
+sup { 
+	font-size: .83em;
+	vertical-align: super;
+}
+
+/* @end Font sizes */
+
+/* @group Margins */
+
+p, ul, ol, dl, address, table, blockquote, pre, fieldset {
+	margin-bottom: 0.5em; /* 12px */
+}
+form {
+}
+ul ul, ol ol, ol ul, ul ol {
+	margin-bottom: 0;
+}
+
+/* @end Margins */
+
+/* @group Links */
+
+a {
+	color: #9f8400;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:visited {
+}
+a:hover,
+a:active,
+a:focus {
+	text-decoration: underline;
+}
+
+/* @end Links */
+
+/* @group Headings */
+
+h1 {
+	font-size: 24px;
+    line-height: 2em; 			/* 48px */
+	margin-top: 0;
+	margin-bottom: 15px;
+    color: #103253;	
+	font-weight: normal;
+	border-bottom: 1px solid #efefef;
+}
+
+h2 {
+	font-size: 18px;
+    color: #103253;
+	font-weight: normal;
+}
+h3 {
+	font-size: 1.2857em;
+	color: #103253;
+}
+h4, h5, h6 {
+	color: #103253;
+	font-size: 12px;
+}
+
+/* @end Headings */
+
+/* @group Lists */
+
+.prose ul, ul.bullets, ul.bullets ul {	/* unordered lists more often DON'T require bullets except in extended bits of writing - use the .prose class or apply directly with .bullets */
+	list-style-type: disc;
+	margin-left: 1.5em; /* 18px */
+}
+.bullets li {
+	margin-top: 1em;			/*  12px */
+	margin-bottom: 1.5em;		/* 18px */
+}
+
+ol {
+}
+
+dt {
+	color: #103253;
+	font-weight: normal;
+	font-size: 16px;
+}
+
+dd {
+	margin-bottom: 20px;
+}
+
+/* @end Lists */
+
+/* @group Tables */
+
+table {
+}
+
+caption {
+}
+
+thead th {
+}
+
+tbody {
+}
+
+tbody tr th,
+tbody tr td {
+}
+
+th,
+td {
+}
+
+/* @end Tables */
+
+/* @end General styles*/
+
+/* @group Helper styles */
+.container {
+	background: #efefef;
+	padding: 5px 0;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.pull-left {
+	display: block;
+	float: left;
+}
+
+.right-gutter {
+	margin: 0 20px 20px 0;
+}
+
+.outline {
+	padding: 1px;
+	border: 1px solid #ccc;
+}
+
+.pull-right {
+	display: block;
+	float: right;
+}
+
+.top {
+	background: url(/sites/movies-at/images/top.gif) no-repeat;
+	height: 10px;	
+}
+
+.btm {
+	background: url(/sites/movies-at/images/btm.gif) no-repeat;
+	height: 10px;	
+}
+
+.col {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.last-col {
+	float: left;
+	margin: 0 0 10px 0;
+}
+
+.span3 {
+	width: 230px;
+}
+
+.span4 {
+	width: 310px;
+}
+
+.notes {
+	text-align: center;
+}
+
+.alert {
+	background-color: #fefed6;
+	border: 1px solid #e8b72d;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+.alert p {
+	margin-bottom: 0px;
+}
+
+.payment {
+	background-color: #efefef;
+	color: #000;
+	font-size: 18px;
+	padding: 20px 10px 20px 70px;
+}
+
+.success {
+	background-image: url(/sites/movies-at/images/payment-success.gif);
+	background-repeat: no-repeat;
+	background-position: 10px 50%;
+}
+
+.note {
+	background: url(/sites/movies-at/images/alert.gif) no-repeat 0 50%;
+	color: #666;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+.details {
+	list-style-position: inside;
+}
+
+.details li {
+	margin-bottom: 0.75em;
+}
+
+.clear-thumbnail {
+	float: left;
+	margin-left: 67px;
+}
+
+/* @end Helper styles*/
+
+/* @group Landing */
+
+#landing {
+	background: #fff url(/sites/movies-at/images/landing-tile.png) repeat-y;
+	width: 630px;
+	margin: 50px auto;
+	text-align: left;
+}
+#landing-top {
+	background:url(/sites/movies-at/images/landing-top.png) no-repeat;
+	height: 10px;
+	width: 630px;
+}
+#landing-btm {
+	background:url(/sites/movies-at/images/landing-btm.png) no-repeat;
+	height: 10px;
+	width: 630px;
+}
+
+#landing p {
+	font-size: 24px;
+}
+
+#landing form {
+	margin: 50px auto;
+}
+
+#landing select {
+	font-size: 32px;
+	padding: 5px;
+}
+
+/* @end Landing */
+
+/* @group Page Layout */
+#site-container {
+	width: 990px;
+	text-align: left;
+	margin: 10px auto;
+}
+
+#main {
+	background: #fff url(/sites/movies-at/images/tile.gif) repeat-y;
+	margin-bottom: 10px;
+}
+
+#primary {
+	float: left;
+	width: 630px;
+	padding-bottom: 20px;
+}
+
+#secondary {
+	float: right;
+	width: 310px;
+}
+
+.wrap-all {
+	margin: 0 auto;
+	width: 950px;
+	overflow: hidden;
+}
+
+.wrap-inner {
+	margin: 10px;
+}
+
+.wrap-primary {
+	width: 630px;
+	overflow: hidden;
+}
+
+.wrap-primary h2 {
+	margin-bottom: 0.5em;
+}
+
+.wrap-primary p, .wrap-primary li {
+	line-height: 1.6em;
+}
+
+/* @group Sub Nav */
+
+#sub-nav {
+	background: #efefef;
+	padding: 20px 0;
+}
+
+#sub-nav li {
+	background: #efefef;
+}
+
+.first {
+	border-top: 1px solid #e0e0e0;
+}
+
+.first a {
+	border-top: 1px solid #fff;
+}
+
+#sub-nav a {
+	background: url(/sites/movies-at/images/sub-nav-tile.gif) repeat-x 0 100%;
+	border-bottom: none;
+	color: #666;
+	display: block;
+	font-size: 13px;
+	text-align: left;
+	line-height: 2.5em;
+	padding-left: 20px;
+}
+
+#sub-nav a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+#sub-nav a#sub-selected {
+	background-color: #fff;
+	color: #333;
+	font-weight: bold;
+}
+
+/* @end */
+
+/* @group Section */
+.section {
+	border: 1px solid #ccc;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+
+.section h2 {
+	background: #00345f;
+	border: 1px solid #fff;
+	color: #fff;
+	font-size: 12px;
+	font-weight: bold;
+	margin: 0;
+	padding-left: 8px;
+	text-transform: uppercase;
+	line-height: 1.75em;	/* 21px */
+}
+
+.section img {
+	border: 1px solid #cfcfcf;
+	padding: 2px;
+}
+
+/* @end Section */
+
+/* @group Content */
+.content h1 {
+}
+
+/* @end Content */
+
+/* @group Book Tickets Now */
+#book-tickets-now {
+	background: url(/sites/movies-at/images/book-tickets-now.gif) no-repeat;
+	display: block;
+	height: 42px;
+	width: 291px;
+	text-indent: -9999px;
+	margin: 0 auto;
+}
+a#book-tickets-now:hover {
+	background-position: 0 -42px;
+}
+
+/* @end Book Tickets Now */
+
+
+
+/* @group Masthead */
+#masthead {
+	background: url(/sites/movies-at/images/top.gif) no-repeat;
+	/* margin-bottom: 10px; */
+	padding: 15px 20px 0 20px;
+	padding-top: 95px;
+	position: relative;
+}
+
+#masthead h1 {
+	height: 61px;
+	width: 163px;
+	margin: 0;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+#masthead h1 a {
+	display: block;
+}
+
+#logo {
+	display: block;
+	height: 62px;
+	width: 163px;
+	margin: 0;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+/* @end Masthead */
+
+/* @group Intro */
+#intro {
+	background: #fff url(/sites/movies-at/images/intro-tile.gif) repeat-x 0 100%;
+	height: 36px;
+	width: 780px;
+	position:absolute;
+	right: 0;
+	top: 50px;
+}
+
+#intro p {
+	background: url(/sites/movies-at/images/intro-end.gif) no-repeat;
+	padding-left: 20px;
+	height: 100%;
+	margin: 0;
+}
+
+#intro p span {
+	background: url(/sites/movies-at/images/intro-star.gif) no-repeat 0 50%;
+	color: #666;
+	display: block;
+	float: left;
+	font-size: 18px;
+	padding-left: 20px;
+	padding-top: 5px;
+	margin-right: 5px;
+}
+
+#intro p a {
+	display: block;
+	float: left;
+	margin-top: 10px;
+	padding: 0 2px;
+}
+
+/* @end Intro */
+
+/* @group Nav */
+#nav {
+	background: #00325a url(/sites/movies-at/images/nav-tile.gif) no-repeat;
+}
+
+#nav div {
+	background: url(/sites/movies-at/images/nav-left.gif) no-repeat;
+	padding-left: 16px;
+	margin-top: 20px;
+}
+
+#nav div ul {
+	background: url(/sites/movies-at/images/nav-right.gif) no-repeat 100% 0;
+	padding-right: 0px;
+	overflow: hidden;
+}
+
+#nav li {
+	float: left;
+}
+
+#nav a {
+	color: #ebebeb;
+	display: block;
+	text-transform: uppercase;
+	line-height: 3em;
+	padding: 0 10px;
+	text-decoration: none;
+}
+
+a#selected, #nav a:hover {
+	background: #002447 url(/sites/movies-at/images/nav-selected-tile.gif) repeat-x;
+	color: #fff;
+}
+/* @end Nav */
+
+/* @group Home Ads */
+#home-ads {
+	float: left;
+	width: 230px;
+}
+
+/* @end Home Ads */
+
+/* @group Staff Pick */
+#staff-pick {
+	float: right;
+	height: 263px;
+	width: 388px;
+}
+
+#staff-pick ul {
+	margin: 20px;
+}
+
+#staff-pick h3 {
+	margin: 0;
+	margin-bottom: 5px;
+}
+
+#staff-pick p {
+	margin: 0 0 5px 0;
+}
+
+#staff-pick li {
+	margin-left: 120px;
+}
+
+#staff-pick li#staff-thumbnail {
+	float: left;
+	margin-left: 0;
+}
+
+#rating {
+	background-image: url(/sites/movies-at/images/stars.gif);
+	background-repeat: no-repeat;
+	height: 11px;
+	width: 55px;
+}
+.stars-1 {
+	background-position: 0 -44px;
+}
+.stars-2 {
+	background-position: 0 -33px;
+}
+.stars-3 {
+	background-position: 0 -22px;
+}
+.stars-4 {
+	background-position: 0 -11px;
+}
+.stars-5 {
+	background-position: 0 0;
+}
+
+/* @end Staff Pick */
+
+/* @group Showtimes */
+
+#showtimes {
+}
+
+#date-select {
+	background: #efefef;
+	border-bottom: 1px solid #ccc;
+	width: 628px;
+	overflow: hidden;
+}
+
+#date-select p {
+	color: #666;
+	float: left;
+	font-weight: bold;
+	line-height: 2em;
+	padding-left: 5px;
+}
+
+#date-select form {
+	float: right;
+	margin: 2px 2px 2px 0;
+}
+
+#date-select select {
+	font-size: 11px;
+	padding: 2px;
+}
+
+#showtimes ol {
+	margin: 10px;
+}
+
+#showtimes ol li {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+}
+
+/* @group Movie */
+.movie {
+	width: 610px;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.movie img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.movie h3 {
+}
+
+.movie h3 a {
+	color: #103253;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.movie p {
+	margin: 0 0 5px 0;
+}
+
+.featured {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+}
+
+.featured-content {
+	margin: 20px;
+}
+
+.featured h2 {
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 1em;
+}
+
+.featured img {
+	border: 5px solid #fff;
+}
+
+
+/* @end Movie */
+
+.times {
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+
+.times table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.times th, .times td {
+	border: 1px solid #fff;
+	line-height: 2em;
+}
+
+.times th {
+	background-color: #f2f2f2;
+	font-weight: normal;
+	width: 170px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.times td {
+	background: #efefef;
+	text-align: center;
+}
+
+.times td a {
+	color: #666;
+	display: block;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.times td a:hover {
+	background: #666;
+	color: #fff;
+}
+
+.times td a.mz {
+	background: #fdf9db url(/sites/movies-at/images/mz.gif) no-repeat 99% 1px;
+	color: #333;
+}
+
+.times td a.mz:hover {
+	background: #666 url(/sites/movies-at/images/mz-hover.gif) no-repeat 99% 1px;
+	color: #fff;
+}
+
+/* @group Booking Details */
+
+.booking-details {
+	border: 1px solid #ccc;
+	padding: 1px;
+	margin-bottom: 10px;
+}
+.booking-details form {
+	background-color: #f2f2f2;
+	padding: 20px;
+}
+.booking-details li {
+	width: 560px;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+.booking-details label {
+	display: block;
+	float: left;
+	font-size: 14px;
+	padding-right: 10px;
+	text-align: right;
+	width: 180px;
+}
+.booking-details select {
+	font-size: 14px;
+	padding: 2px;
+	width: 180px;
+}
+
+.booking-details h4 {
+	color: #666;
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+#month, #year {
+	width: 117px;
+}
+
+.booking-note {
+	color: #666;
+	display: block;
+	margin-left: 190px;
+	font-style: italic;
+}
+/* @end Booking Details */
+
+/* @group Order Details */
+
+#order-details {
+	background-color: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+
+#order-details h4 {
+	color:#666666;
+	font-size:14px;
+	margin-bottom: 10px;
+}
+
+#order-details th, #order-details td {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	padding: 5px;
+}
+
+/* @end Order Details */
+
+/* @group Seats */
+#seats {
+	background-color: #f2f2f2;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+/* @end Seats */
+
+/* @end Showtimes */
+
+/* @group New This Week */
+#new-this-week {
+	padding: 20px;
+}
+
+#new-this-week ul {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+#new-this-week li {
+	border-bottom: 1px solid #efefef;
+	width: 270px;
+	overflow: hidden;
+}
+
+#new-this-week li a {
+	color: #103253;
+	font-weight: normal;
+}
+
+.new-title {
+	display: block;
+	float: left;
+	line-height: 2em;
+}
+
+.new-details {
+	float: right;
+	padding-top: 4px;
+}
+
+.new-details a {
+	display: block;
+	float: left;
+	height: 16px;
+	width: 16px;
+	margin-right: 5px;
+	text-indent: -9999px;
+}
+
+.new-details a.info {
+	background: url(/sites/movies-at/images/movie-info.gif)
+}
+
+.new-details a.trailer {
+	background: url(/sites/movies-at/images/view-trailer.gif)
+}
+
+.new-details a:hover {
+	background-position: 0 -16px;
+}
+
+/* @end New This Week */
+
+/* @group ft */
+#ft {
+	background: #fff url(/sites/movies-at/images/tile.gif) repeat-y;
+}
+
+#ft .wrap-all {
+	padding-top: 5px;
+}
+
+#ft li {
+	line-height: 2em;
+}
+
+#ft a {
+	color: #333;
+	font-weight: normal;
+}
+
+#ft h4 {
+	margin: 0;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+}
+
+.ft-col {
+	width: 203px;
+}
+
+/* @end ft */
+
+/* @group ft-comp */
+#ft-comp {
+	width: 203px;
+	overflow: hidden;
+}
+
+#ft-comp img {
+	float: left;
+	display: block;
+	margin: 0 10px 40px 0;
+}
+
+#ft-comp p {
+	margin: 0 0 5px 0;
+}
+
+#ft-comp a {
+	font-weight: bold;
+}
+
+/* @end ft-comp */
+
+/* @group ft-connect */
+#ft-connect li {
+	padding-left: 22px;
+}
+#yt {
+	background:url(/sites/movies-at/images/youtube.png) no-repeat 0 50%;
+}
+#fb {
+	background:url(/sites/movies-at/images/facebook.png) no-repeat 0 50%;
+}
+#bb {
+	background:url(/sites/movies-at/images/bebo.png) no-repeat 0 50%;
+}
+#tt {
+	background:url(/sites/movies-at/images/twitter.png) no-repeat 0 50%;
+}
+/* @end ft-connect */
+
+/* @group ft-contact */
+#ft-contact {
+	background-color: #f2f2f2;
+	padding: 10px;
+}
+.adr {
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+.adr p {
+	margin: 0;
+}
+
+/* @end ft-contact */
+
+/* @group Copyright */
+#copyright {
+	color: #666;
+	padding: 20px 0 50px;
+	text-align: center;
+}
+
+#copyright p {
+	margin-bottom: 10px;
+}
+
+#copyright p a {
+	color: #666;
+	font-weight: normal;
+}
+
+#copyright p a:hover {
+	color: #333;
+}
+
+/* @end Copyright */
+
+/* @group Mezz */
+#mezz-screenshots {
+	-moz-border-radius-bottomleft: 10px;
+	-moz-border-radius-bottomright: 10px;
+	-moz-border-radius-topleft: 10px;
+	-moz-border-radius-topright: 10px;
+	background: #efefef;
+	padding: 10px;
+	text-align:center;
+	width: 290px;
+}
+
+#slider {
+	margin-bottom: 10px;
+}
+
+#slider-wrap {
+	overflow: hidden;
+}
+
+#slider-wrap ul {
+	overflow:hidden;
+}
+
+#slider-wrap li {
+	height: 170px;
+	margin: 0;
+	overflow: hidden;
+	padding: 0;
+	width: 290px;
+}
+/* @end Mezz */
+
+/* @group Index Item */
+
+.index-item {
+	margin-top: -10px;
+}
+
+.index-item li {
+	border-bottom: 1px solid #efefef;
+	padding-bottom: 15px;
+}
+
+.index-item-content {
+	margin: 1em 1em 0 1em;
+	position: relative;
+	overflow: hidden;
+}
+
+.index-item .thumbnail {
+	display: block;
+	float: left;
+	margin: 0 20px 30px 0;
+}
+
+.index-item h2 a {
+	color: #103253;
+	font-weight: normal;
+}
+
+.index-item p {
+	margin-bottom: 5px;
+}
+
+/* @end Index Item */
+
+
+/* @group Map */
+#map {
+	background: #f2f2f2;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+/* @end Map */
+
+/* @group Prices */
+.prices {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+.prices h3 {
+	color: #666;
+	font-size: 12px;
+	margin-bottom: 5px;
+}
+
+.prices table {
+	width: 590px;
+}
+
+.prices th, .prices td {
+	background-color: #fff;
+	border-bottom: 1px solid #ccc;
+	font-size: 10px;
+	padding: 2px 2px;
+	text-align: center;
+}
+
+.prices th {
+	color: #000;
+}
+
+.prices th.align-left {
+	text-align: left;
+	padding-left: 5px;
+}
+
+.prices ol {
+	border-top: 1px solid #ccc;
+	padding-top: 10px;
+	list-style-position:inside;
+}
+
+/* @end Prices */
+
+/* @group Brannigan Meal Deals */
+.md-content {
+	margin-left: 120px;
+}
+
+.md-price {
+	background: url(/sites/movies-at/images/tag_yellow.png) no-repeat 0 50%;
+	padding-left: 20px;
+	font-style: italic;
+}
+
+#md-brannigans li {
+	border-bottom: none;
+	margin-bottom: 10px;
+	padding-left: 40px;
+}
+
+#b-one {
+	background: url(/sites/movies-at/images/one.png) no-repeat;
+}
+#b-two {
+	background: url(/sites/movies-at/images/two.png) no-repeat;
+}
+#b-three {
+	background: url(/sites/movies-at/images/three.png) no-repeat;
+}
+
+#md-brannigans h3 {
+	color: #103253;
+	font-size: 12px;
+	font-weight: normal;
+	margin: 0;
+}
+
+#md-brannigans p {
+	margin: 0;
+}
+
+.md-note {
+	color:#999999;
+	font-family:Georgia,serif;
+	font-style:italic;
+}
+
+/* @end */
+
+/* @group Coming Soon */
+
+.cs-content {
+	margin-left: 110px;
+}
+
+.cs-content th {
+	padding-right: 10px;
+}
+
+/* @end */
+
+/* @group Kids Club */
+
+#kids-club li {
+	border-bottom: 1px solid #ccc;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+#kids-club li h3 {
+	margin-bottom: 5px;
+}
+
+/* @end Kids Club */
+
+
+/* @group Contact */
+
+.vcard {
+	font-size: 14px;
+}
+
+.org {
+	color: #000;
+}
+
+.adr a {
+	color: #333;
+	font-weight: normal;
+}
+
+#get-in-touch {
+	width: 75%;
+}
+
+#get-in-touch th {
+	width: 120px;
+}
+
+#get-in-touch a {
+	color: #333;
+	font-weight: normal;
+}
+
+#get-in-touch p {
+	color:#999;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+/* @end Contact */
+
+
+/* @group Important */
+
+.important {
+	margin-left: 120px;
+	width: 75%;
+}
+
+.important h3 {
+	background: url(/sites/movies-at/images/alert.gif) no-repeat 0 50%;
+	border-bottom: 1px solid #e2dab2;
+	color: #9f8400;
+	font-size: 12px;
+	line-height: 2em;
+	padding-left: 15px;
+}
+
+.important ol {
+	list-style-position: inside;
+}
+
+.important li {
+	border-bottom: 1px solid #efefef;
+	line-height: 2em;
+}
+
+/* @end */
+
+/* @group Icon Block */
+
+.icon-block img {
+	display: block;
+	float: left;
+	margin: 0 20px 20px 0;
+}
+
+.icon-block h2 {
+	color: #9F8400;
+	font-family: Georgia;
+	font-style: italic;
+}
+
+/* @end Icon Block */
+
+/* @group Comp Enter */
+#comp-enter {
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc;
+	padding: 20px;
+}
+
+#comp-enter p {
+	font-size: 18px;
+	font-weight: normal;
+	
+}
+
+#comp-enter fieldset label {
+	padding-right: 10px;
+}
+
+#comp-enter li {
+	border-bottom: 1px solid #e5e5e5;
+	padding: 10px 0;
+}
+
+#comp-enter li label {
+	display: block;
+	float: left;
+	width: 110px;
+	text-align: left;
+}
+
+#comp-enter li input {
+	width: 200px;
+}
+
+#comp-enter-btn {
+	margin: 0 0 10px 108px;
+}
+/* @Form Styles */
+.styletext{
+	background:#FFFFFF;
+	border: thin #00325a solid;
+}
+/* @end Form Styles */
+
+/* @end Comp Enter */
+
+.custLogin {
+	text-align: right;
+	font-size: 18px;
+}
+
+#loyaltyAlert {
+	color: red;
+	font-weight: bold;
+	font-size: 19px;
+}

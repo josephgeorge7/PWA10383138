@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Movie Ticket Booking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <style>
+	ul > li > a{
+		padding: 5px !important;
+	}
+	p{
+		text-align:justify;
+	}
+  </style>
+</head>
+<body>
+ 
+<div class="container">
+	<div>
+		<h2 class="">Movies List</h2>
+	</div>
+	<form name="movie_form" method="get">
+		<div class="row movie_list">
+		  
+		</div>
+	</form>
+</div>
+<script>
+$(function() { //shorthand document.ready function
+    $('#movie_form').on('submit', function(e) { //use on if jQuery 1.7+
+			$(function () {
+				$("#btnQueryString").bind("click", function () {
+					var url = "select.html?name=" + encodeURIComponent($("#txtName").val()) + "&technology=" + encodeURIComponent($("#ddlTechnolgy").val());
+					window.location.href = url;
+				});
+			});
+	
+        e.preventDefault();  //prevent form from submitting
+        var data = $("#movie_form :input").serializeArray();
+        console.log(data); //use the console for debugging, F12 in Chrome, not alerts
+    });
+});
+ $(document).ready(function () {
+      $('.dropdown-menu a').click(function(e){
+    //Show table
+    debugger;
+    var x = $(event.relatedTarget).text(); // Get the text of the element
+    alert(e.target.text);
+});
+	//add Next second day
+	 var m_names = new Array("January", "February", "March", 
+		"April", "May", "June", "July", "August", "September", 
+		"October", "November", "December");
+	var currentDate = new Date();
+	var todaydd = currentDate.getDate();
+	var tomodd = currentDate.getDate()+1;
+	var dd = currentDate.getDate()+2;
+	var mm = currentDate.getMonth(); //January is 0!
+
+	if(dd<10){
+	dd='0'+dd;
+	} 
+	
+	var todayDate = todaydd+' '+m_names[mm];
+	var nextDay = tomodd+' '+m_names[mm];
+	var nextsecDay = dd+' '+m_names[mm];
+	<!-- $('#nextSecDay').text(today); -->
+	 //add Next second day end
+	 
+	  // selct show timing as per day
+		var days = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
+		var d = new Date();
+		var dayNum = d.getDay();//Get current Day
+		var nextdayNum = d.getDay()+1;//Get current Day
+		var nextsecdayNum = d.getDay()+2;//Get current Day
+		var nextdayName = days[dayNum+1];//Get tomorrow Day
+		var nextsecdayName = days[dayNum+2];//Get Day after tomorrow Day 
+		var dayName = days[dayNum];
+		var today = dayName.substring(0, 3);
+		var nxtday = nextdayName.substring(0, 3);
+		var nxtsecday = nextsecdayName.substring(0, 3);
+		
+	jQuery.ajax({
+        url: "https://college-movies.herokuapp.com/",
+        type: "GET",
+
+        contentType: 'application/json; charset=utf-8',
+        success: function (resultData) {
+          <!-- var tmpResult = resultData.slice(0, 9); -->
+          var tmpResult = resultData;
+
+          for (var i = 0; i < tmpResult.length; i++) {
+
+            var title = tmpResult[i]['title'],
+              director = tmpResult[i]['director'],
+              cast = tmpResult[i]['cast'],
+              note = tmpResult[i]['notes'],
+              genre = tmpResult[i]['genre'];
+
+			var todayTiming = '';
+			for (var j = 0; j < tmpResult[i]['runningTimes'][today].length; j++) {
+				todayTiming += '<a href="select.html?name=' + encodeURIComponent(title) + '&Date=' + encodeURIComponent(todayDate) + ' &showTime=' + encodeURIComponent(tmpResult[i]['runningTimes'][today][j])+'" class="btn btn-default btn-sm">'+ tmpResult[i]['runningTimes'][today][j] + '</a>';
+			}
+			var tomorrowTiming = '';
+			for (var k = 0; k < tmpResult[i]['runningTimes'][nxtday].length; k++) {
+				tomorrowTiming += '<a href="select.html?name=' + encodeURIComponent(title) + '&Date=' + encodeURIComponent(nextDay) + ' &showTime=' + encodeURIComponent(tmpResult[i]['runningTimes'][nxtday][k])+'" class="btn btn-default btn-sm">'+ tmpResult[i]['runningTimes'][nxtday][k] + '</a>';
+			}
+			var nextSecondTiming = '';
+			for (var l = 0; l < tmpResult[i]['runningTimes'][nxtsecday].length; l++) {
+				nextSecondTiming += '<a href="select.html?name=' + encodeURIComponent(title) + '&Date=' + encodeURIComponent(nextsecDay) + ' &showTime=' + encodeURIComponent(tmpResult[i]['runningTimes'][nxtsecday][l])+'" class="btn btn-default btn-sm">'+ tmpResult[i]['runningTimes'][nxtsecday][l] + '</a>';
+			}
+
+            var imgName = tmpResult[i]['title'];
+            imgName = imgName.replace(/\s/g, '');
+            imgName = imgName.toLowerCase();
+
+            $('.movie_list').append('<div class="card" style="width:260px;margin: 5px; "><div class="card-body"><h4 class="card-title">'+ title + '</h4><p><strong>Director: </strong>'+ director + '</p><p><strong>Cast: </strong>'+ cast + '</p><p><strong>Genre: </strong>'+ genre + '</p><p><strong>Notes: </strong>'+ note + '</p> <h6>Showtimes :</h6><ul class="nav nav-tabs"><li><a data-toggle="tab" href="#today_'+i+'">Today</a></li><li><a data-toggle="tab" href="#tomorrow_'+i+'">Tomorrow</a></li><li><a data-toggle="tab" href="#nextsecday_'+i+'">'+nextsecDay+'</a></li></ul><div class="tab-content"><div id="today_'+i+'" class="tab-pane fade in">'+ todayTiming +'</div><div id="tomorrow_'+i+'" class="tab-pane fade in">'+ tomorrowTiming +'</div><div id="nextsecday_'+i+'" class="tab-pane fade in">'+ nextSecondTiming +'</div></div></div></div>');
+			
+			<!-- $('#today_'+i).tab('show'); -->
+          }
+        },
+		
+        error: function (jqXHR, textStatus, errorThrown) {
+          console.log("err");
+        },
+
+        timeout: 120000,
+      });
+
+    });
+</script>
+</body>
+</html>
+

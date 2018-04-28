@@ -1,0 +1,247 @@
+.OLCT_purchaseProgress{margin-top:-20px; padding-right:10px;}
+.OLCT_activePurchaseProgress{float:right; color:#000;}
+.OLCT_inactivePurchaseProgress{float:right; color:#777}
+.OLCT_currentPurchaseProgress{text-decoration:underline;}
+.OLCT_activeSeperatorPurchaseProgress{float:right;padding-left:10px;padding-right:10px; color:#000;}
+.OLCT_inactiveSeperatorPurchaseProgress{float:right;padding-left:10px;padding-right:10px; color:#777}
+
+.OLCT_DetailsPlayTrailer{position:absolute; margin-left:-242px; margin-top:0px;	width:226px;}
+
+.OLCT_paymentSection input, textarea, select, option {
+    background: #FAFAFA;
+    outline:none;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    border:1px solid rgba(0,0,0, 0.2);
+}
+
+.OLCT_paymentSection input:focus, textarea:focus, select:focus, option:focus {
+    background: #FFFFFF;
+    box-shadow: 0 0 5px rgba(0, 0, 255, 1);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 255, 1); 
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 255, 1);
+    border:1px solid rgba(0,0,255, 0.8); 
+}
+
+.payAlert {color:red; font-size:14px; font-weight:bold;}
+
+.payNote {color:red;}
+
+.OLCT_eventSubtitleIcon {
+float:right; border:0px;
+margin-left:10px;
+}
+
+.OLCT_event3DIcon {
+float:right; border:0px;
+}
+
+.OLCT_paymentProcess {
+}
+
+.OLCT_paymentProcess table{
+	margin-top: 200px;
+	width: 450px;
+	background: #fff;
+	border: 1px solid #000;
+}
+
+.OLCT_paymentProcess th, .OLCT_paymentProcess td{
+	padding:10px;
+}
+
+.OLCT_paymentProcessTime {
+}
+
+#OLCT_seatPlan {background-color: #f2f2f2; border: 1px solid #ccc; padding: 20px; margin-bottom: 10px;}
+#OLCT_seatPlan .frontRow  {text-transform: uppercase; line-height: 2em;}
+#OLCT_seatPlan .screen {
+  background:#000; color:#fff; font-weight:bold; font-size:16px;
+  height:30px; width:400px;	margin:auto 10px auto 10px;
+}
+.OLCT_SelectSeatButton {width:300px; display:block; text-align:center; margin-bottom:10px; margin:auto;}
+.OLCT_SelectSeatButton p {margin:0px; padding-top:5px; color:#fff;}
+.OLCT_SelectSeatButton a {width:291px; height:42px; background:url('/sites/movies-at/images/bookseats.png') no-repeat;}
+.OLCT_SelectSeatButton a:hover {background-position:0px -42px;}
+
+.OLCT_paymentSection {background-color: #f2f2f2; 	border: 1px solid #ccc;	padding: 10px; margin-bottom: 10px;}
+.OLCT_paymentItem {clear:both; padding-left:20px; padding-bottom:5px}
+.OLCT_paymentItem label{float:left; width:150px; padding-top:4px; text-align:left}
+
+
+.OLCT_successSection {background-color: #f2f2f2; 	border: 1px solid #ccc;	padding: 10px; margin-bottom: 10px;}
+
+.OLCT_formButtons {clear:both}
+.OLCT_ticketSection {background-color: #f2f2f2; 	border: 1px solid #ccc;	padding: 20px; margin-bottom: 10px;}
+.OLCT_ticketItem {clear:both}
+.OLCT_ticketItem select{float:left; width:100px; margin:5px; }
+.OLCT_ticketItem label{float:left; width:400px; padding-left:5px; padding-top:2px; text-align:left; margin-top:5px;}
+
+
+
+
+.OLCT_movieTimesContainer {
+
+}
+
+.OLCT_movieTimesInfo {
+	width: 610px;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.OLCT_movieTimesInfo img {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+.OLCT_movieTimesInfo h3 {
+}
+
+.OLCT_movieTimesInfo h3 a {
+	color: #103253;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.OLCT_movieTimesInfo p {
+	margin: 0 0 5px 0;
+}
+
+
+
+
+.OLCT_eventMiniImage {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	height:160px;
+}
+
+.OLCT_pageOuterWrapper {}
+
+.OLCT_pageOuterWrapper h2 {}
+
+.OLCT_pageInnerWrapper {margin-top:-8px; padding:10px;}
+
+.OLCT_movieDetailsContainer {
+	width: 610px;
+	width: 100%;
+	overflow: hidden;
+	margin-bottom: 10px;
+	padding-top: 10px;
+}
+
+.OLCT_eventLargeRating {
+float:right; border:0px;
+margin-left:10px;
+}
+
+.OLCT_eventLargeImage {
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width:226px;
+	height:320px;
+}
+
+.OLCT_movieDetailsContainer h3 {
+font-size:25px;
+margin-top:0px;
+padding-bottom:10px;
+}
+
+.OLCT_movieDetailsContainer h3 a {
+	color: #103253;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+.OLCT_movieDetailsContainer p {
+	margin: 0 0 5px 0;
+}
+
+.OLCT_ticketInfoText {
+font-weight:bold;
+font-size:16px;
+}
+
+.OLCT_movieDetailsContainer table{
+margin-top:-8px;
+margin-bottom:-1px;
+}
+
+.OLCT_eventWebsiteLink {
+float:right; margin-top:-25px; padding-right:8px;
+}
+
+.OLCT_movieTimes {
+	border: 1px solid #ccc;
+	padding: 1px;
+}
+
+.OLCT_movieTimes table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.OLCT_movieTimes th, .OLCT_movieTimes td {
+	border: 1px solid #fff;
+	line-height: 2em;
+}
+
+.OLCT_movieTimes th {
+	background-color: #f2f2f2;
+	font-weight: normal;
+	width: 170px;
+	text-align: left;
+	padding-left: 5px;
+}
+
+.OLCT_movieTimes td {
+	background: #efefef;
+	text-align: center;
+}
+
+.OLCT_movieTimes td a {
+	color: #666;
+	display: block;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.OLCT_movieTimes td a:hover {
+	background: #666;
+	color: #fff;
+}
+
+.OLCT_movieTimes td a.mz {
+	background: #fdf9db url('/sites/movies-at/images/mz.gif') no-repeat 99% 1px;
+	color: #333;
+}
+
+.OLCT_movieTimes td a.mz:hover {
+	background: #666 url('/sites/movies-at/images/mz-hover.gif') no-repeat 99% 1px;
+	color: #fff;
+}
+
+.OLCT_movieTimes td a.sub {
+	background: #fdf9db url('/sites/movies-at/images/sub.png') no-repeat 99% 1px;
+	color: #333;
+}
+
+.OLCT_movieTimes td a.sub:hover {
+	background: #666 url('/sites/movies-at/images/sub-hover.png') no-repeat 99% 1px;
+	color: #fff;
+}
+
+.OLCT_soldOutTime {
+  color: #f00;
+}
